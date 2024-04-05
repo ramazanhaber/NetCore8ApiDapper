@@ -9,7 +9,5 @@ namespace NetCore8ApiDapper.Interfaces
 
         Task<IEnumerable<Notlar>> GetAllAsync3();
 
-
-
     }
 }
