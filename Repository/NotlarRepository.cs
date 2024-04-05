@@ -23,6 +23,12 @@ namespace NetCore8ApiDapper.Repository
             var notlar = await _connection.QueryAsync<object>("SELECT *,'selamlar' as naber FROM notlar");
             return notlar;
         }
+
+        public async Task<IEnumerable<Notlar>> GetAllAsync3()
+        {
+            var notlar = await _connection.QueryAsync<Notlar>("SELECT * FROM notlar");
+            return notlar;
+        }
     }
 
 }
