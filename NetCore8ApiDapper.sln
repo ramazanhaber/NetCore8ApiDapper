@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore8ApiDapper", "NetCore8ApiDapper.csproj", "{F5F082B3-0060-4FDE-A505-196AE4157FD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5F082B3-0060-4FDE-A505-196AE4157FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F082B3-0060-4FDE-A505-196AE4157FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F082B3-0060-4FDE-A505-196AE4157FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F082B3-0060-4FDE-A505-196AE4157FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CED6DDA4-AADF-459E-9334-D4C1A10E9425}
+	EndGlobalSection
+EndGlobal
