@@ -17,7 +17,7 @@ namespace NetCore8ApiDapper.Controllers
         public NotlarController(DatabaseConnections connections, IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            _connection = connections.DefaultConnection; // ilk veri tabanı
+            _connection = connections.DefaultConnection; // ilk veri tabanı1
         }
 
         [HttpGet]
