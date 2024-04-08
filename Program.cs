@@ -26,6 +26,21 @@ string defaultConnectionString = builder.Configuration.GetConnectionString("Defa
 
 IDbConnection defaultConnection = new SqlConnection(defaultConnectionString);
 
+
+string sqlbasarili = "SQL Bağlandı.";
+try
+{
+    using (var connection = new SqlConnection(defaultConnectionString))
+    {
+        connection.Open();
+    }
+}
+catch (Exception ex)
+{
+    sqlbasarili = "HATA SQL Bağlanamadı !";
+}
+
+
 string secondConnectionString = builder.Configuration.GetConnectionString("SecondConnection");
 
 IDbConnection secondConnection = new SqlConnection(secondConnectionString);
@@ -62,7 +77,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI(c => {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "myapi v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "myapi v1 "+ sqlbasarili);
     });
 }
 
