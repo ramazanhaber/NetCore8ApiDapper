@@ -1,6 +1,4 @@
-﻿using Dapper;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NetCore8ApiDapper.Helper;
 using NetCore8ApiDapper.Interfaces;
 using NetCore8ApiDapper.Models;
@@ -20,7 +18,6 @@ namespace NetCore8ApiDapper.Controllers
         {
             this.unitOfWork = unitOfWork;
             _connection = connections.DefaultConnection; // ilk veri tabanı
-
         }
 
         [HttpGet]
