@@ -29,6 +29,18 @@ namespace NetCore8ApiDapper.Repository
             var notlar = await _connection.QueryAsync<Notlar>("SELECT * FROM notlar");
             return notlar;
         }
+
+        public async Task<IEnumerable<object>> GetAllAsync4()
+        {
+            var notlar = await _connection.QueryAsync("SELECT * FROM notlar");
+
+            foreach (var item in notlar)
+            {
+                string ad = item.ad;
+            }
+
+            return notlar;
+        }
     }
 
 }

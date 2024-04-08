@@ -55,18 +55,27 @@ namespace NetCore8ApiDapper.Controllers
 
 
         [HttpPost]
-        [Route("notlarilistele")]
-        public async Task<IActionResult> notlarilistele()
+        [Route("GetAllAsync2")]
+        public async Task<IActionResult> GetAllAsync2()
         {
             var notlarler = await unitOfWork.Notlar.GetAllAsync2();
             return Ok(notlarler);
         }
 
         [HttpPost]
-        [Route("notlarilistele2")]
-        public async Task<IActionResult> notlarilistele2()
+        [Route("GetAllAsync3")]
+        public async Task<IActionResult> GetAllAsync3()
         {
             var notlarler = await unitOfWork.Notlar.GetAllAsync3();
+            return Ok(notlarler);
+        }
+
+
+        [HttpPost]
+        [Route("GetAllAsync4")]
+        public async Task<IActionResult> GetAllAsync4()
+        {
+            var notlarler = await unitOfWork.Notlar.GetAllAsync4();
             return Ok(notlarler);
         }
 
