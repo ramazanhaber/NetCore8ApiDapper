@@ -13,7 +13,6 @@ namespace NetCore8ApiDapper.Controllers
         private readonly IUnitOfWork unitOfWork;
         private readonly IDbConnection _connection;
 
-
         public NotlarController(DatabaseConnections connections, IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
@@ -73,6 +72,14 @@ namespace NetCore8ApiDapper.Controllers
         public async Task<IActionResult> GetAllAsync4()
         {
             var notlarler = await unitOfWork.Notlar.GetAllAsync4();
+            return Ok(notlarler);
+        }
+
+        [HttpPost]
+        [Route("GetAllAsync5")]
+        public async Task<IActionResult> GetAllAsync5()
+        {
+            var notlarler = await unitOfWork.Notlar.GetAllAsync5();
             return Ok(notlarler);
         }
 

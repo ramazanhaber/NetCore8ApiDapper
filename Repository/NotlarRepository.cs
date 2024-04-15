@@ -1,6 +1,4 @@
 ﻿using Dapper;
-using Dapper.Contrib.Extensions;
-using Microsoft.AspNetCore.Mvc;
 using NetCore8ApiDapper.Helper;
 using NetCore8ApiDapper.Interfaces;
 using NetCore8ApiDapper.Models;
@@ -39,6 +37,12 @@ namespace NetCore8ApiDapper.Repository
                 string ad = item.ad;
             }
 
+            return notlar;
+        }
+
+        public async Task<IEnumerable<object>> GetAllAsync5()
+        {
+            var notlar = await _connection.QueryAsync("SELECT ad  FROM notlar");
             return notlar;
         }
     }

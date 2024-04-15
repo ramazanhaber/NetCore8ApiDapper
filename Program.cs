@@ -1,14 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.ResponseCompression;
+﻿using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Data.SqlClient;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
 using NetCore8ApiDapper.Helper;
 using NetCore8ApiDapper.Interfaces;
 using NetCore8ApiDapper.Repository;
 using System.Data;
 using System.IO.Compression;
-using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -76,8 +72,9 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI(c => {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "myapi v1 "+ sqlbasarili);
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "myapi v1 " + sqlbasarili);
     });
 }
 
